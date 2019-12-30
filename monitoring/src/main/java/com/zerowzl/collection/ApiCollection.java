@@ -32,7 +32,8 @@ public class ApiCollection {
     public static void main(String[] args) throws InterruptedException {
         ApiCollection apiCollection = new ApiCollection();
         apiCollection.startRepeatedReport(10, TimeUnit.SECONDS);
-        for (int i = 0; i < 1_000_000; i++) {
+        int loop = 1_000_000;
+        for (int i = 0; i < loop; i++) {
             long timesTemp = System.currentTimeMillis();
             apiCollection.recordTimesTemps("test1", timesTemp);
             Thread.sleep(100);
